@@ -1,2 +1,3 @@
 @ECHO OFF
-php ./server.php
+CALL php server.php
+set /p input=
