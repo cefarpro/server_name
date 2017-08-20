@@ -1,0 +1,6 @@
+[submodule "libs/phpmorphy"]
+	path = libs/phpmorphy
+	url = https://github.com/cefarpro/phpmorphy.git
+[submodule "class"]
+	path = class
+	url = https://github.com/cefarpro/class.git

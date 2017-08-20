@@ -1,11 +1,12 @@
 <?php
 
-	require './class/Os.class.php';
-	// heromantor/phpmorphy
-	require_once( realpath( dirname(__FILE__) . '/src/common.php'  ) );
-	// require './libs/phpmorphy/changewords.php';
+	$path = realpath( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR;
+	$path_libs = $path . 'libs' . DIRECTORY_SEPARATOR;
+	require_once( $path_libs . 'changewords.php' );
+	require_once( $path . 'class' . DIRECTORY_SEPARATOR . 'Os.class.php' );
 
 /*
+
 		$adjective = file( './libs/adjective.txt' );
 		$noun = file( './libs/noun.txt' );
 
@@ -19,14 +20,16 @@
 				}
 			}
 
-
 */
-		
 
 	//echo "---------\n";
 	//echo "OS :: generateName:\n";
-	$name = Os :: generateName( './libs/adjective.txt', './libs/noun.txt' );
+	$name = Os :: generateName( $path_libs . 'adjective.txt', $path_libs . 'noun.txt' );
 	$uid = ChangeWords( $name[ 'noun' ], $name[ 'adjective' ] ) . "\n";
 	echo $uid . "\n";
 	//echo var_export( Os :: computerInfo( ), true );
 	//echo "\n";
+
+
+
+
