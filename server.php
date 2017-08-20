@@ -27,7 +27,8 @@
 	//echo "OS :: generateName:\n";
 	$name = Os :: generateName( $path_libs . 'adjective.txt', $path_libs . 'noun.txt' );
 	$uid = ChangeWords( $name[ 'noun' ], $name[ 'adjective' ] ) . "\n";
-	echo Os :: out( $uid );
+	$out = Color :: green( $uid );
+	echo Os :: out( $out );
 	//echo var_export( Os :: computerInfo( ), true );
 	//echo "\n";
 
