@@ -11,5 +11,5 @@
 	$out = Color :: green( $uid );
 	$uid = sprintf( '%u', crc32( $out ) );
 
-	file_put_contents( 'name', $out );
-	file_put_contents( 'uid', $uid );
+	file_put_contents( '_name', $out );
+	file_put_contents( '_uid', $uid );
